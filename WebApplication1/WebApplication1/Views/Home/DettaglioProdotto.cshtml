@@ -1,0 +1,30 @@
+﻿@model WebApplication1.Models.Scarpe
+
+@{
+    ViewBag.Title = "DettaglioProdotto";
+}
+
+<h2>DettaglioProdotto</h2>
+
+<div>
+    <h4>Prodotti</h4>
+    <hr />
+    <div class="row">
+        <div class="col-4 d-flex justify-content-lg-start">
+            <img src="../.@Model.Img1" alt="@Model.NomeProdotto" class="mw-100">
+            <img src="../.@Model.Img2" alt="@Model.NomeProdotto" class="mw-100">
+            <img src="../.@Model.Img3" alt="@Model.NomeProdotto" class="mw-100">
+        </div>
+
+    </div>
+    <div class="col-8">
+        <h3>@Model.NomeProdotto</h3>
+        <p>@Model.Descrizione</p>
+        <p>@Model.Prezzo Sesterzi</p>
+    </div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }, new { @class = "btn btn-warning" }) |
+    @Html.ActionLink("Back to List", "Index", new { /* id = Model.PrimaryKey */ }, new { @class = "btn btn-primary" })
+</p>
